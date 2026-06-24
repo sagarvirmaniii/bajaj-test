@@ -19,8 +19,8 @@ class BfhlServiceImplTest {
 
         assertThat(response.isSuccess()).isTrue();
         assertThat(response.getUserId()).isEqualTo("sagar_virmani_24062026");
-        assertThat(response.getEmail()).isEqualTo("sagarvirmni@gmail.com");
-        assertThat(response.getRollNumber()).isEqualTo("2310991635");
+        assertThat(response.getEmail()).isEqualTo("sagar1384.be23@chitkara.edu.in");
+        assertThat(response.getRollNumber()).isEqualTo("2310991384");
         assertThat(response.getOddNumbers()).containsExactly("1");
         assertThat(response.getEvenNumbers()).containsExactly("334", "4");
         assertThat(response.getAlphabets()).containsExactly("A", "R");

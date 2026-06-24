@@ -16,8 +16,8 @@ import java.util.Locale;
 public class BfhlServiceImpl implements BfhlService {
 
     private static final String FULL_NAME = "sagar_virmani";
-    private static final String EMAIL = "sagarvirmni@gmail.com";
-    private static final String ROLL_NUMBER = "2310991635";
+    private static final String EMAIL = "sagar1384.be23@chitkara.edu.in";
+    private static final String ROLL_NUMBER = "2310991384";
     private static final LocalDate QUALIFIER_DATE = LocalDate.of(2026, 6, 24);
     private static final DateTimeFormatter USER_ID_DATE_FORMAT = DateTimeFormatter.ofPattern("ddMMyyyy");
 

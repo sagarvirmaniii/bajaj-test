@@ -34,8 +34,8 @@ Response:
 {
   "is_success": true,
   "user_id": "sagar_virmani_24062026",
-  "email": "sagarvirmni@gmail.com",
-  "roll_number": "2310991635",
+  "email": "sagar1384.be23@chitkara.edu.in",
+  "roll_number": "2310991384",
   "odd_numbers": ["1"],
   "even_numbers": ["334", "4"],
   "alphabets": ["A", "R"],
