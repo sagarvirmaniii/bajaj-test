@@ -6,11 +6,9 @@ Production-ready Spring Boot 3 REST API solution for the Chitkara Qualifier 1 BF
 
 | Resource           | URL                                                       |
 | ------------------ | --------------------------------------------------------- |
-| Base URL           | https://bajaj-api-986b.onrender.com                       |
 | BFHL API (POST)    | https://bajaj-api-986b.onrender.com/bfhl                  |
 | Health Check (GET) | https://bajaj-api-986b.onrender.com/actuator/health       |
 | Swagger UI         | https://bajaj-api-986b.onrender.com/swagger-ui/index.html |
-| OpenAPI Docs       | https://bajaj-api-986b.onrender.com/v3/api-docs           |
 
 ## Candidate Information
 
