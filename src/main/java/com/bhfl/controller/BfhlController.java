@@ -8,10 +8,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/bfhl")
@@ -20,10 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class BfhlController {
 
     private final BfhlService bfhlService;
-
-    public BfhlController(BfhlService bfhlService) {
-        this.bfhlService = bfhlService;
-    }
 
     @PostMapping
     @Operation(summary = "Process BFHL input data")
