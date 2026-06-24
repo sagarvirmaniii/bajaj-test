@@ -1,26 +1,44 @@
 # Chitkara Qualifier BFHL API
 
-Production-ready Spring Boot 3 REST API for the Chitkara Qualifier 1 BFHL problem.
+Production-ready Spring Boot 3 REST API solution for the Chitkara Qualifier 1 BFHL Challenge.
 
-## Tech Stack
+## Live Deployment
 
-- Java 21
-- Spring Boot 3
-- Maven
-- JUnit 5
-- Lombok
-- OpenAPI Swagger UI
-- Spring Boot Actuator
-- Docker
-- Render free tier deployment config
+| Resource           | URL                                                       |
+| ------------------ | --------------------------------------------------------- |
+| Base URL           | https://bajaj-api-986b.onrender.com                       |
+| BFHL API (POST)    | https://bajaj-api-986b.onrender.com/bfhl                  |
+| Health Check (GET) | https://bajaj-api-986b.onrender.com/actuator/health       |
+| Swagger UI         | https://bajaj-api-986b.onrender.com/swagger-ui/index.html |
+| OpenAPI Docs       | https://bajaj-api-986b.onrender.com/v3/api-docs           |
 
-## API
+## Candidate Information
 
-### POST `/bfhl`
+| Field             | Value                                                                   |
+| ----------------- | ----------------------------------------------------------------------- |
+| Name              | Sagar Virmani                                                           |
+| Email             | [sagar1384.be23@chitkara.edu.in](mailto:sagar1384.be23@chitkara.edu.in) |
+| Roll Number       | 2310991384                                                              |
+| GitHub Repository | https://github.com/sagarvirmaniii/bajaj-test                            |
 
-Valid requests always return HTTP `200`.
+## Features
 
-Request:
+* Spring Boot 3 REST API
+* POST `/bfhl` Endpoint
+* GET `/bfhl` Health Endpoint
+* Request & Response DTOs
+* Service Layer with Interface
+* Global Exception Handling
+* Swagger / OpenAPI Documentation
+* JUnit 5 Test Cases
+* JaCoCo Code Coverage
+* Docker Support
+* Render Deployment Ready
+* Spring Boot Actuator Health Monitoring
+
+---
+
+## Sample Request
 
 ```json
 {
@@ -28,7 +46,7 @@ Request:
 }
 ```
 
-Response:
+## Sample Response
 
 ```json
 {
@@ -45,119 +63,26 @@ Response:
 }
 ```
 
-Error response shape:
-
-```json
-{
-  "is_success": false,
-  "message": "error message"
-}
-```
-
-## Build
+## Quick Test
 
 ```bash
-mvn clean package
+curl -X POST https://bajaj-api-986b.onrender.com/bfhl \
+-H "Content-Type: application/json" \
+-d '{
+  "data": ["s","1","334","4","P","$"]
+}'
 ```
 
-## Run
+---
 
-```bash
-mvn spring-boot:run
-```
+## Tech Stack
 
-The API starts on `http://localhost:8080` by default.
-
-## Test
-
-```bash
-mvn test
-```
-
-JaCoCo coverage report:
-
-```bash
-open target/site/jacoco/index.html
-```
-
-## Swagger
-
-Swagger UI:
-
-```text
-http://localhost:8080/swagger-ui.html
-```
-
-OpenAPI JSON:
-
-```text
-http://localhost:8080/v3/api-docs
-```
-
-## Actuator
-
-Health endpoint:
-
-```text
-http://localhost:8080/actuator/health
-```
-
-## Docker
-
-Build the image:
-
-```bash
-docker build -t chitkara-qualifier-api .
-```
-
-Run the container:
-
-```bash
-docker run --rm -p 8080:8080 chitkara-qualifier-api
-```
-
-## Render Deployment
-
-1. Push this repository to GitHub.
-2. Open Render and create a new Blueprint.
-3. Select the GitHub repository.
-4. Render will read `render.yaml`.
-5. Deploy the `chitkara-qualifier-api` web service.
-
-Render sets the `PORT` environment variable automatically. The app reads it through:
-
-```properties
-server.port=${PORT:8080}
-```
-
-## Project Structure
-
-```text
-src/main/java/com/bhfl
-├── Application.java
-├── config
-│   └── OpenApiConfig.java
-├── controller
-│   └── BfhlController.java
-├── dto
-│   ├── BfhlRequest.java
-│   └── BfhlResponse.java
-├── exception
-│   └── GlobalExceptionHandler.java
-├── service
-│   ├── BfhlService.java
-│   └── BfhlServiceImpl.java
-└── util
-    └── ConcatStringUtil.java
-```
-
-## CI
-
-GitHub Actions workflow: `.github/workflows/build.yml`
-
-It runs:
-
-```bash
-mvn test
-mvn package
-```
+* Java 21
+* Spring Boot 3
+* Maven
+* JUnit 5
+* Lombok
+* OpenAPI Swagger UI
+* Spring Boot Actuator
+* Docker
+* Render
