@@ -18,6 +18,16 @@ public class BfhlController {
 
     private final BfhlService bfhlService;
 
+    @GetMapping
+    public ResponseEntity<BfhlResponse> health() {
+        return ResponseEntity.ok(
+                BfhlResponse.builder()
+                        .success(true)
+                        .message("live")
+                        .build()
+        );
+    }
+
     @PostMapping
     @Operation(summary = "Process BFHL input data")
     public ResponseEntity<BfhlResponse> process(@Valid @RequestBody BfhlRequest request) {

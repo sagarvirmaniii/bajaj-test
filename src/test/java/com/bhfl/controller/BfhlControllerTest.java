@@ -11,6 +11,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.is;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -21,6 +22,14 @@ class BfhlControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
+
+    @Test
+    void returnsHealthStatus() throws Exception {
+        mockMvc.perform(get("/bfhl"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.is_success", is(true)))
+                .andExpect(jsonPath("$.message", is("live")));
+    }
 
     @Test
     void returnsOkForValidRequest() throws Exception {
